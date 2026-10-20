@@ -1,0 +1,24 @@
+<script>
+  function runServerFunction(functionName) {
+    return new Promise(function(resolve, reject) {
+      google.script.run
+        .withSuccessHandler(resolve)
+        .withFailureHandler(reject)[functionName]();
+    });
+  }
+
+  async function updateStatus() {
+    var statusEl = document.getElementById('app-status');
+
+    try {
+      var response = await runServerFunction('getAppStatus');
+      statusEl.textContent = response && response.message ? response.message : 'Sin respuesta válida';
+    } catch (error) {
+      statusEl.textContent = 'No se pudo comunicar con Apps Script';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    updateStatus();
+  });
+</script>

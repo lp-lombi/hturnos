@@ -1,0 +1,13 @@
+{
+  "name": "turnos-google",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "Google.clasp"
+      ]
+    }
+  }
+}
