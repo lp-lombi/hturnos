@@ -1,0 +1,19 @@
+# Apps Script / clasp (secreto y configuración local)
+.clasprc.json
+.clasp.json
+
+# Variables de entorno y secretos
+.env
+.env.*
+*.pem
+*.key
+
+# Dependencias y artefactos
+node_modules/
+npm-debug.log*
+
+# Editor / SO / Codespaces
+.vscode/
+.idea/
+.DS_Store
+.devcontainer/.history/

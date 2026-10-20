@@ -1,0 +1,19 @@
+# Enviar solo fuente mínima de Apps Script
+**
+!appsscript.json
+!src/**/*.js
+!src/**/*.html
+
+# Nunca enviar secretos ni configuración local
+.clasprc.json
+.clasp.json
+.env
+.env.*
+
+# No enviar documentación ni tooling local
+README.md
+.clasp.json.example
+package.json
+package-lock.json
+.devcontainer/**
+.git/**
